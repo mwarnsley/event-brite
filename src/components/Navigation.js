@@ -2,7 +2,7 @@ import React from 'react';
 
 const Navigation = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-primary mb-5">
+        <nav className="navbar navbar-expand-lg navbar-dark fixed-top bg-primary mb-5">
             <a className="navbar-brand" href="#">
                 Search Events
             </a>

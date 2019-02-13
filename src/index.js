@@ -8,6 +8,8 @@ import Footer from './components/Footer';
 
 import * as serviceWorker from './serviceWorker';
 
+import './styles.css';
+
 const App = () => (
     <BrowserRouter>
         <Fragment>
