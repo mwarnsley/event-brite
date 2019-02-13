@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Api from '../../api';
 
-const Home = () => {
-    const api = new Api();
-    console.log('Api: ', api);
-    return <div>HOME PAGE</div>;
-};
+import Search from './Search';
+
+const api = new Api();
+
+class Home extends Component {
+    state = {
+        categories: []
+    };
+    componentDidMount = async () => {
+        const fetchCategories = await api.getCategories();
+        this.setState({ categories: fetchCategories.categories });
+    };
+    render() {
+        const { categories } = this.state;
+        return (
+            <div>
+                <Search categories={categories} />
+            </div>
+        );
+    }
+}
 
 export default Home;

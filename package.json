@@ -2,8 +2,13 @@
   "name": "event-brite",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "6.4.1",
+    "node": "10.15.1"
+  },
   "dependencies": {
     "lodash": "^4.17.11",
+    "prop-types": "^15.7.1",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-router-dom": "^4.3.1",
