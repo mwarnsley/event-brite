@@ -1,14 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import NoImage from '../../assets/no-image.jpg';
+
 const EventCard = ({ event }) => {
     return (
         <div className="card">
             <div className="card-body">
                 <img
                     alt="event"
-                    className="img-fluid mb-2"
-                    src={event.logo ? event.logo.url : ''}
+                    className="img-fluid mb-2 event-image"
+                    src={event.logo ? event.logo.url : NoImage}
+                    style={{
+                        height: 175,
+                        maxHeight: 175,
+                        width: '100%'
+                    }}
                 />
             </div>
             <div className="card-body">
